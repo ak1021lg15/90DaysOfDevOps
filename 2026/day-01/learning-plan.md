@@ -17,9 +17,8 @@ After finishing this course I really really want to get a job as a DevOps engine
 # Current level
 I have 3.1 years of experience.
 
-# Goals :
 # Core DevOps skills and next 90 days:
-Deploy a production-grade application on Kubernetes
+Deploy a production-grade application on Kubernetes.
 Learn and troubleshoot Kubernetes.
 Master networking locally and at cloud level.
 Master Docker file writing.
