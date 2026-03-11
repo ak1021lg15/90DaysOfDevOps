@@ -1,6 +1,6 @@
 # Core components of Linux:
-Hardware : The physical component where OS is installed.
-Kernel : The heart of Linux. The central core that directly controls hardware, processes, memory. Interface between hardware and software. Machine understands kernel language.
+Hardware : The physical component where OS is installed.  
+Kernel : The heart of Linux. The central core that directly controls hardware, processes, memory.Interface between hardware and software. Machine understands kernel language.  
 Shell : Interactive way to talk to kernel using commands.
 GUI : Graphical user interface for visual interaction.
 System Libraries : Collections of pre-written functions that applications use to request services from the kernel.
