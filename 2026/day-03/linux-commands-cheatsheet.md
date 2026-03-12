@@ -31,8 +31,8 @@ ip a - Show  IP Address.
 ifconfig/ip a - Display all network interfaces with IP addresses.  
 netstat -a - Show listening tcp and udp ports and corresponding programs.  
 traceroute host - Traces network path.  
-wget url - Download files from internet. 
-dig - Detailed DNS query.   
+wget url - Download files from internet.  
+dig - Detailed DNS query.  
 whois domain - Displays whois information for domain.  
 host domain - Displays DNS IP address for domain.  
 nslookup domain - Display IP address of domain.  
