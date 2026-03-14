@@ -2,7 +2,7 @@
 - ps -aux | head -n 10 = List running processes(top 10 lines).  
 ![](Image/s1.png)
 
--pgrep -l sshd - Get the process id by process name.  
+- pgrep -l sshd - Get the process id by process name.  
 ![](Image/s2.png)   
 
 
@@ -22,15 +22,13 @@
 ![](Image/s6.png)
 
 #Service for inspection (SSH)
-- systemctl status ssh  
-![](Image/s7.png.png)
-
--  systemctl status docker  
-![](Image/s8.png.png)
+- systemctl status docker  
+![](Image/s8.png)
 docker service running let's stop it.  
-![](Image/s9.png.png)
-![](Image/s10.png.png)
-![](Image/s11.png.png)
+![](Image/s9.png)
+![](Image/s10.png)
+again start docker service
+![](Image/s11.png)
 
 
 
