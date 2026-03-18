@@ -2,10 +2,12 @@
 ![alt text](image.png)
 
 
-*Scenario 3: Finding Service Logs*
-`A developer asks: "Where are the logs for the 'docker' service?"`
-`The service is managed by systemd.`
-`What commands would you use?`
+*Scenario 3: Finding Service Logs*  
+```
+A developer asks: "Where are the logs for the 'docker' service?"
+The service is managed by systemd.
+What commands would you use?
+```
 
 - Step 1: To confirm service status and see log hints.
 sudo systemctl status docker
