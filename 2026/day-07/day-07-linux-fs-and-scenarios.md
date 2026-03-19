@@ -9,9 +9,19 @@
 - `home/`
 - `var/`
 
-**I would use this when** I want to understand the overall system layout or navigate to core directories.
+**I would use this when** I want to understand the overall system layout or navigate to core directories.  
 ![](screenshot/s1.png)
 
+## /home
+**Contains:** Home directories for normal users where personal files, scripts, and configs are stored.
+
+**Observed (`ls -l /home`):**
+- `berlin/`
+- `tokyo/`
+- `ubuntu/`
+
+**I would use this when** working with user files, projects, and automation scripts.  
+![](screenshot/s2.png)
 
 *Scenario 3: Finding Service Logs*  
 ```
