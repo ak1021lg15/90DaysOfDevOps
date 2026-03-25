@@ -19,7 +19,7 @@ pvs                      # Verify physical volume creation
 
 ### 3. Create Volume Group
 ```bash
-vgcreate devops-vg /dev/xvdfn   # Create a volume group named devops-vg
+vgcreate devops-vg /dev/xvdf  # Create a volume group named devops-vg
 vgs                                # Verify volume group creation
 ```
 
@@ -97,7 +97,7 @@ vgs
 **Observation:**
 - Volume group `devops-vg` created with 10G free space
 
-![task3](image.png)
+![task3](ss/s3.png)
 ---
 
 ## Task 4: Create Logical Volume
