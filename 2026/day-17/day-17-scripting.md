@@ -79,9 +79,9 @@
 
 2. Modify your `install_packages.sh` to check if the script is being run as root — exit with a message if not.
 
-   [Script](scripts/modified_install_packages.sh)
+   [Script](scripts/modified_install_package.sh)
    
-   ![snapshot](images/modify_installpkg.png)
+   ![modified](ss/s8.png)
 
 ---
 
