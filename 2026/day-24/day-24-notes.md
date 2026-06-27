@@ -98,29 +98,30 @@
 ### Task 3: Squash Commit vs Merge Commit
 1. Create a branch `feature-profile`, add 4-5 small commits (typo fix, formatting, etc.)
 
-      ![image](images/task3.1.png)
+      ![squash](ss/feature-profile.png)
 
 2. Merge it into `main` using `--squash` — what happens?
 
-      ![image](images/task3.2.png)
+      ![fp2](ss/fp-2.png)
 
 3. Check `git log` — how many commits were added to `main`?
    
-   - Exactly one commit was added to the main branch.(12abdc7)
+   - Exactly one commit was added to the main branch.(5a2b655)
 
+      ![git log fp](ss/gitlog_fp.png)
       ![image](images/task3.3.png)
 
 
 4. Now create another branch `feature-settings`, add a few commits
 
-      ![image](images/task3.4.png)
+      ![alt text](ss/feature-settings.png)
 
 
 5. Merge it into `main` **without** `--squash` (regular merge) — compare the history
 
    - A regular merge preserves every individual commits 0982efc and f90be94 directly in the main history.
 
-      ![image](images/task3.5.png)
+      ![normal merge](ss/normal_merge.png)
 
 
 6. Answer in your notes:
@@ -146,8 +147,7 @@
 - If there is no conflict,git allows the switch and your changes move with you.
 - If there is a conflict,git blocks the switch to prevent overwriting your changes.
 
-   ![image](images/task4.1.png)
-
+   ![stash](ss/stash.png)
 
 3. Use `git stash` to save your work-in-progress
 4. Switch to another branch, do some work, switch back
@@ -155,7 +155,8 @@
 6. Try stashing multiple times and list all stashes
 7. Try applying a specific stash from the list
 
-      ![image](images/task4-6.png)
+   ![stash2](ss/stash2.png)
+   ![stash3](ss/stash3.png)
 
 
 8. Answer in your notes:
@@ -170,45 +171,4 @@
 
 ---
 
-### Task 5: Cherry Picking
-1. Create a branch `feature-hotfix`, make 3 commits with different changes
-
-      ![image](images/task5.1.png)
-
-   
-2. Switch to `main`
-
-   - Before cherry-pick: `4b4eac0` Improve login error messages
-      
-      ![image](images/task5.1.2.png)
-
-
-3. Cherry-pick **only the second commit** from `feature-hotfix` onto `main`
-   - After resolving conflict: `bc0d4bd` (HEAD -> main) Improve login error messages
-   - The commit ID changed because cherry-pick creates a new commit
-
-      ![image](images/task5cnflctchry.png)
-
-
-4. Verify with `git log` that only that one commit was applied
-
-      ![image](images/task5cherry.png)
-
-
-
-5. Answer in your notes:
-   - What does cherry-pick do?
-      - Applies a specific commit from one branch to another and creates a new commit with a new ID.
-
-   
-   - When would you use cherry-pick in a real project?
-   
-      - When I need only specific changes, like applying a hotfix from a feature branch to main,without merging the entire branch
-   
-   - What can go wrong with cherry-picking?
-      - merge conflicts if same file was modified.
-      - Commit history confusion because it creates new commit ids.
-
 ---
-
-[def]: ss/main.png
