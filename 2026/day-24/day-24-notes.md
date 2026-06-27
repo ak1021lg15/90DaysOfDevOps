@@ -109,7 +109,6 @@
    - Exactly one commit was added to the main branch.(5a2b655)
 
       ![git log fp](ss/gitlog_fp.png)
-      ![image](images/task3.3.png)
 
 
 4. Now create another branch `feature-settings`, add a few commits
@@ -170,5 +169,43 @@
       - If I’m working on a feature and need to urgently switch branches to fix a production bug,I would use git stash to temporarily save my unfinished changes before switching.
 
 ---
+### Task 5: Cherry Picking
+1. Create a branch `feature-hotfix`, make 3 commits with different changes
+
+      ![cherry pick](ss/cherryPicking.png)
+
+   
+2. Switch to `main`
+
+   - Before cherry-pick: `4b4eac0` Improve login error messages
+      
+      ![cherrypICK2](ss/cherryPick2.png)
+
+
+3. Cherry-pick **only the second commit** from `feature-hotfix` onto `main`
+   - After resolving conflict: `bc0d4bd` (HEAD -> main) Improve login error messages
+   - The commit ID changed because cherry-pick creates a new commit
+
+      ![cherrypick3](ss/cherrypick3.png)
+
+
+4. Verify with `git log` that only that one commit was applied
+
+      ![gitlogcherry](ss/cherrypick4.png)
+
+
+
+5. Answer in your notes:
+   - What does cherry-pick do?
+      - Applies a specific commit from one branch to another and creates a new commit with a new ID.
+
+   
+   - When would you use cherry-pick in a real project?
+   
+      - When I need only specific changes, like applying a hotfix from a feature branch to main,without merging the entire branch
+   
+   - What can go wrong with cherry-picking?
+      - merge conflicts if same file was modified.
+      - Commit history confusion because it creates new commit ids.
 
 ---
