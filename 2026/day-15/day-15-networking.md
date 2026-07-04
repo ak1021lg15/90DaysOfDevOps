@@ -52,8 +52,7 @@
 ### 4.Run: ip addr show
 - Command: `ip addr show`  
 - Example private IP: `172.31.25.8`
-![ip address](s2.png)
-
+  ![ip address](s2.png)
 ---
 
 ## Task 3: CIDR & Subnetting
