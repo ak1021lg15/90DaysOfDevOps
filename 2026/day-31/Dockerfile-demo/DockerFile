@@ -21,3 +21,4 @@ EXPOSE 80
 # '-g "daemon off;"' keeps Nginx running in the foreground,
 # otherwise the container would stop immediately
 CMD ["nginx", "-g", "daemon off;"]
+

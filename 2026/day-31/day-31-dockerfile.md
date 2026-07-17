@@ -29,7 +29,7 @@ Understand the purpose of commonly used Dockerfile instructions by building and 
 
 ### Source Files
 
-- **Dockerfile:** [Dockerfile-demo/Dockerfile](./Dockerfile-demo/Dockerfile)
+- **Dockerfile:** [Dockerfile-demo/Dockerfile](./Dockerfile-demo/DockerFile)
 - **HTML File:** [Dockerfile-demo/index.html](./Dockerfile-demo/index.html)
 
 ### Instructions Used
