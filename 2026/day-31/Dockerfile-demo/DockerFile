@@ -1,0 +1,23 @@
+# Use the official Nginx image based on Alpine Linux (small and lightweight)
+FROM nginx:alpine
+
+# Set the default working directory inside the container
+# This is the folder from which Nginx serves web pages
+WORKDIR /usr/share/nginx/html
+
+# Copy the index.html file from your local machine
+# to the current working directory inside the container
+COPY index.html .
+
+# Execute this command during the image build process
+# (This is just for demonstration; it prints a message while building)
+RUN echo "Website Ready"
+
+# Document that this container uses port 80
+# Note: EXPOSE does NOT publish the port to the host
+EXPOSE 80
+
+# Start the Nginx web server when the container starts
+# '-g "daemon off;"' keeps Nginx running in the foreground,
+# otherwise the container would stop immediately
+CMD ["nginx", "-g", "daemon off;"]
