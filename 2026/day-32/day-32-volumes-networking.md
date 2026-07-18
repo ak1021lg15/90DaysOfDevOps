@@ -52,16 +52,17 @@
 ### Task 3: Bind Mounts
 1. Create a folder on your host machine with an `index.html` file
 
-    ![image](images/task3.1.png)
+    ![alt text](ss/task3.1.png)
 
 2. Run an Nginx container and **bind mount** your folder to the Nginx web directory
+    ![alt text](ss/task3.2.png)
 3. Access the page in your browser
 
-    ![image](images/tsk3.23.png)
+    ![alt text](ss/task3.3.png)
 
 4. Edit the `index.html` on your host — refresh the browser
 
-    ![image](images/task3.4.png)
+    ![alt text](ss/task3.4.png)
 
 **Volumes vs Bind Mounts**
     
@@ -79,12 +80,12 @@
 ### Task 4: Docker Networking Basics
 1. List all Docker networks on your machine
 
-    ![image](images/task4.1.png)
+    ![network ls](ss/task4.1.png)
 
 2. Inspect the default `bridge` network
 
-    ![image](images/task4.2.png)
-
+    ![image](ss/task4.2.png)
+    ![containers](ss/task4.3.png)
 - `docker network inspect` is the command used to retrieve detailed configuration and status information about a specific Docker network.
 - The `bridge network` is indeed the default network in Docker.
 
@@ -92,28 +93,28 @@
 
 -   No
     
-    ![image](images/task4.3.png)
+    ![alt text](ss/task4.4.png)
 
 
 4. Run two containers on the default bridge — can they ping each other by **IP**?
 
 -   Yes
 
-    ![image](images/task4.4.png)
+    ![alt text](ss/task4.5.png)
 
 ---
 
 ### Task 5: Custom Networks
 1. Create a custom bridge network called `my-app-net`
 
-    ![image](images/task5.1.png)
+    ![image](ss/task5.1.png)
 
 2. Run two containers on `my-app-net`
 3. Can they ping each other by **name** now?
 
 - `yes they can ping each other by name`
 
-    ![image](images/task523.png)
+    ![ping](ss/task5.2.png)
 
 
 4. Why does custom networking allow name-based communication but the default bridge doesn't?
