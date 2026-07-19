@@ -127,14 +127,13 @@
 ### Task 6: Put It Together
 1. Create a custom network
 
-    ![custom-network](task6.1.png)
+    ![custom-network](ss/task6.1.png)
 
 2. Run a **database container** (MySQL/Postgres) on that network with a volume for data
 3. Run an **app container** (use any image) on the same network
 4. Verify the app container can reach the database by container name
 
     ![image](ss/task6.2.png)
-    ![image](ss/images/task6234.png)
 
 
 ---
