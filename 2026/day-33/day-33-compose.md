@@ -50,7 +50,7 @@ Start it, access WordPress in your browser, and set it up.
 
 -Docker Compose file of wordpress and mysql container.
     [Compose file](wordpress-mysql-compose/docker-compose.yml)
-    
+
 - Folder create and `docker compose up`
 
     ![folder_dockerYML_docker_compose](ss/task3.1.png)
@@ -87,31 +87,38 @@ Practice and document these:
 1. Start services in **detached mode**
 
     `docker compose up -d`
-    ![image](images/task4.1.png)
+
+    ![alt text](ss/task4.1.png)
 
 2. View running services
 
     `docker compose ps`
-    ![image](images/task4.2.png)
+
+    ![alt text](ss/task4.2.png)
 
 3. View **logs** of all services
 
-    `docker compose logs db` && `docker compose logs wordpress`
-    ![image](images/task4.3.png)
+
+    ![all logs](ss/task4.3.png)
 
 4. View logs of a **specific** service
 
-    ![image](images/task4.4.png)
+
+    `docker compose logs db` && `docker compose logs wordpress`
+    
+    ![db and wordpress logs](ss/image.png)
+
 
 5. **Stop** services without removing
 
     `docker compose stop`
-    ![image](images/task4.5.png)
+    ![stop compose](ss/task4.5.png)
 
 6. **Remove** everything (containers, networks)
 
     `docker compose down`
-    ![image](images/task4.6.png)
+
+    ![remove](ss/task4.6.png)
 
 7. **Rebuild** images if you make a change
 
