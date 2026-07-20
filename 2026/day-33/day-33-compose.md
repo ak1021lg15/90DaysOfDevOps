@@ -16,18 +16,24 @@
 ### Task 2: Your First Compose File
 1. Create a folder `compose-basics`
 2. Write a `docker-compose.yml` that runs a single **Nginx** container with port mapping
-3. Start it with `docker compose up`
-4. Access it in your browser
-5. Stop it with `docker compose down`
 
     [Compose file](compose-basics/docker-compose.yml)
-    
+
     ![image ](ss/task2.1.png)
 
+3. Start it with `docker compose up`
+    
     ![image](ss/task2.2.png)
 
+4. Access it in your browser
+    
     ![nginx](ss/task2.3.png)
 
+5. Stop it with `docker compose down`
+
+    ![down compose](ss/task2.4.png)
+
+    ![after down web](ss/task2.5.png)
 ---
 
 ### Task 3: Two-Container Setup
@@ -42,29 +48,37 @@ They should:
 
 Start it, access WordPress in your browser, and set it up.
 
-![image](images/wrd1.png)
+-Docker Compose file of wordpress and mysql container.
+    [Compose file](wordpress-mysql-compose/docker-compose.yml)
+    
+- Folder create and `docker compose up`
 
+    ![folder_dockerYML_docker_compose](ss/task3.1.png)
 
-![image](images/wrd2install.png)
+- Verify the container using `docker ps` command.
 
+    ![docker ps](ss/task3.2.png)
 
-![image](images/wrdbefore.png)
+- Verfiy the network `docker network ls`
 
+    ![docker network ls](ss/task3.3.png)
+
+- Verfify the volume `docker volume ls`
+
+    ![docker volume ls](ss/task3.4.png)
+
+- WordPress
+
+    ![wordpressImage](ss/task3.5.png)
+    ![wordpressinstallation](ss/task3.6.png)
+    ![wp-admin](ss/task3.7.png)
 
 **Verify:** Stop and restart with `docker compose down` and `docker compose up` — is your WordPress data still there?
 
 - Yes,wordpress data is there.
-
-
-![image](images/down.png)
-
-
-![image](images/wrdafter.png)
-
-
-
-[Compose file](wordpress-mysql/docker-compose.yml)
-    
+![after down again up](ss/task3.8.png)
+![after down login](ss/task3.9.png)
+![after down wp-admin](ss/task3.10.png)
 
 ---
 
