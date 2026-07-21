@@ -106,7 +106,7 @@ Practice and document these:
 
     `docker compose logs db` && `docker compose logs wordpress`
     
-    ![db and wordpress logs](ss/image.png)
+    ![db and wordpress logs](ss/task4.4.png)
 
 
 5. **Stop** services without removing
