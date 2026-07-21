@@ -77,10 +77,8 @@ Create a `docker-compose.yml` for a 3-service stack:
 
     [Dockerfile](web_db_cache/app/Dockerfile)
 
-    [before](ss/task4.1.png)
-    [docker ps before](task4.2.png)
- 
-
+    ![before](ss/task4.1.png)
+    ![docker ps before](task4.2.png)
     ![build afte changes some code](ss/task4.5.png)
     ![after change web](ss/task4.3.png)
     ![docker ps after](ss/task4.4.png)
