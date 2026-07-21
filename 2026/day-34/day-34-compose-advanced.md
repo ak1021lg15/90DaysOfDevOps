@@ -75,7 +75,7 @@ Create a `docker-compose.yml` for a 3-service stack:
 2. Make a code change in your app
 3. Rebuild and restart with one command
 
-    [Dockerfile](web_db_cache/app/Dockerfile)
+    [Dockerfile](3-tier-web-db-cache/app/Dockerfile)
 
     ![before](ss/task4.1.png)
     ![docker ps before](task4.2.png)
