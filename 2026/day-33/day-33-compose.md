@@ -131,24 +131,24 @@ Practice and document these:
 2. Create a `.env` file and reference variables from it in your compose file
 3. Verify the variables are being picked up
 
-    ![env](tsakl5.1.png)
+    ![env](ss/task5.1.png)
 
-    ![edited yml for env](task5.2.png)
+    ![edited yml for env](ss/task5.2.png)
 - Verified that Docker Compose successfully loaded all variables from the .env file and generated the expected configuration.
   
-   ![docker compose config](task5.3.png)
+   ![docker compose config](ss/task5.3.png)
 
 - Container start
 
-   ![docker up](task5.4.png)
+   ![docker up](ss/task5.4.png)
 
 - Verified the env inside the MYSQL Container
 
-   ![inside the mysql container](task5.5.png)
+   ![inside the mysql container](ss/task5.5.png)
   
 - Verified the env inside the Wordpress Container
 
-   ![inside the wordpress container](task5.6.png)
+   ![inside the wordpress container](ss/task5.6.png)
 
 
     [Compose file](wordpress-mysql-compose-env/docker-compose.yml)
