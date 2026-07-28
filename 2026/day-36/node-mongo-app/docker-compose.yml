@@ -1,0 +1,57 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: node-app
+
+    ports:
+      - "3000:3000"
+
+    env_file:
+      - .env
+
+    depends_on:
+      mongodb:
+        condition: service_healthy
+
+    networks:
+      - app-network
+
+    restart: unless-stopped
+
+  mongodb:
+    image: mongo:8
+
+    container_name: mongodb
+
+    ports:
+      - "27017:27017"
+
+    environment:
+      MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
+
+    volumes:
+      - mongo-data:/data/db
+
+    networks:
+      - app-network
+
+    restart: unless-stopped
+
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+volumes:
+  mongo-data:
+
+networks:
+  app-network:
+    driver: bridge
