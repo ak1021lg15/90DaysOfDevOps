@@ -2,9 +2,11 @@ version: "3.9"
 
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ashish3185/node-mongo-app-app:latest
+
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
 
     container_name: node-app
 
