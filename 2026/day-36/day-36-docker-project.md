@@ -12,7 +12,7 @@
 
 ### Why I Chose This Application
 
-I selected a Node.js Task Manager API because it represents a common backend application used in real-world environments. It demonstrates how a REST API communicates with a MongoDB database while running inside Docker containers. This project also provides hands-on experience with container networking, persistent storage, and Docker Compose.
+I selected a Node.js and MongoDb. It is very simple project in which I will show home page and users api. It demonstrates how a REST API communicates with a MongoDB database while running inside Docker containers. This project also provides hands-on experience with container networking, persistent storage, and Docker Compose.
 
 **Project:** [`node-mongop-app`](./node-mongo-app)
 ---
