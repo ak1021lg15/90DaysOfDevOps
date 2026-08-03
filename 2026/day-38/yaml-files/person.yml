@@ -1,0 +1,18 @@
+# Key-Value Pairs
+name: Ashish Kumar
+role: Cloud and DevOps Engineer
+experience_years: 3.1
+learning: true
+
+# Lists Using - (dash)
+tools:
+  - aws
+  - linux
+  - shell scripting
+  - networking
+  - docker
+  - git & github
+  - github actions
+
+# Lists Using square brackets [ ] Inline format
+hobbies: [playing cricket, travelling, music]
