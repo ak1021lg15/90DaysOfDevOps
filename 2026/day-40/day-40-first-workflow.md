@@ -11,7 +11,6 @@
 
 
 ![task 1 repo setup](ss/task1.png)
-![Task 1 - Repository Setup](./images/01-task-1.png)
 
 ---
 
@@ -76,7 +75,7 @@ Update `hello.yml` to:
 
 Push the changes and observe the new workflow run.
 
-![task 4 added more workflow steps](task4.png)
+![task 4 added more workflow steps](ss/task4.png)
 
 ---
 
