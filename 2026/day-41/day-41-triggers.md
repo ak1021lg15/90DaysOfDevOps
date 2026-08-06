@@ -166,7 +166,10 @@
 
 ![alt text](ss/task5.1.png)
 
-
+### What did you observe
+- The excluded combination (Windows + Python 3.10) did not run.
+- Both Python 3.11 jobs failed because of the intentional exit 1.
+- Since fail-fast was set to false, the remaining jobs continued and completed successfully instead of being cancelled.
 ### Notes
 
 - `exclude` removes unsupported matrix combinations from execution.
