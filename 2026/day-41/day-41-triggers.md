@@ -162,7 +162,7 @@
 
 > Fail-Fast Workflow:
 >
-> [Click here to view the workflow file.](./workflows/exclude-fail-fast.yml)
+> [Click here to view the workflow file.](./workflows/exclude-and-fail-fast.yml)
 
 ![alt text](ss/task5.1.png)
 
