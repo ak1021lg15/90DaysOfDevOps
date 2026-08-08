@@ -57,7 +57,7 @@ GitHub is responsible for:
 
 > GitHub Pre-installed workflow:
 >
-> [Click here to view the workflow file.](./workflows/ubuntu-preinstalled.yml)
+> [Click here to view the workflow file.](./workflows/ubunutu-preinstalled.yml)
 
 ### 
 
