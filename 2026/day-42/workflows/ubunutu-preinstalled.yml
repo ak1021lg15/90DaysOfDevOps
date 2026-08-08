@@ -1,0 +1,44 @@
+name: ubuntu pre-installed software
+
+on:
+    workflow_dispatch:
+
+jobs:
+    ubuntu-job:
+        runs-on: ubuntu-latest
+
+        steps: 
+
+            - name: Check Docker Version 
+              run: docker --version 
+
+            - name: Check Python Version 
+              run: python --version 
+
+            - name: Check Node Version 
+              run: node --version 
+
+            - name: Check Git Version 
+              run: git --version
+
+        
+        # steps:
+        #     - name: Print Software Versions
+        #       run: |
+        #         echo "Docker version: $(docker --version)"
+        #         echo "Python version: $(python3 --version)"
+        #         echo "Node.js version: $(node --version)"
+        #         echo "Git version: $(git --version)"
+    
+        # steps:
+
+        #     - name: print tools version
+        #       run: |
+        #         echo "Docker versions:" 
+        #         docker --version
+        #         echo "Python version:" 
+        #         python --version
+        #         echo "Node version:" 
+        #         node --version
+        #         echo "Git version:" 
+        #         git --version
