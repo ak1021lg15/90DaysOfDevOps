@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker CI/CD Dashboard</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+        .hero {
+            padding: 70px 20px 50px;
+            text-align: center;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid #334155;
+            border-radius: 999px;
+            background: #1e293b;
+            color: #86efac;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        h1 {
+            margin: 22px 0 12px;
+            font-size: clamp(36px, 7vw, 64px);
+            letter-spacing: -2px;
+        }
+        .hero p {
+            max-width: 720px;
+            margin: auto;
+            color: #94a3b8;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 1100px;
+            margin: -10px auto 60px;
+            padding: 0 20px;
+        }
+        .status {
+            margin-bottom: 28px;
+            padding: 18px 22px;
+            border-radius: 14px;
+            background: #14532d;
+            border: 1px solid #22c55e;
+            color: #dcfce7;
+            font-weight: bold;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+        .card {
+            padding: 26px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            transition: transform .2s, border-color .2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #64748b;
+        }
+        .icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            margin: 0 0 10px;
+            color: #f8fafc;
+        }
+        .card p {
+            margin: 0;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+        .pipeline {
+            margin-top: 28px;
+            padding: 30px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 18px;
+        }
+        .pipeline h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+        .flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+        .flow span {
+            padding: 12px 16px;
+            border-radius: 10px;
+            background: #334155;
+            color: #f8fafc;
+            font-weight: bold;
+        }
+        .arrow { color: #64748b; font-size: 22px; }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+        }
+        code {
+            color: #86efac;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="badge">✓ CONTAINER RUNNING</div>
+
+        <h1>Docker CI/CD using Github Actions</h1>
+
+        <p>
+            A simple demonstration of building, tagging, pushing,
+            pulling and running a Docker image using GitHub Actions.
+        </p>
+    </section>
+
+    <main class="container">
+
+        <div class="status">
+            🚀 Deployment successful — Docker image is running locally!
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+                <div class="icon">🔨</div>
+                <h3>Docker Build</h3>
+                <p>
+                    GitHub Actions automatically builds the Docker image
+                    from the Dockerfile.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🏷️</div>
+                <h3>Image Tags</h3>
+                <p>
+                    The image uses both <code>latest</code> and a
+                    short Git commit SHA tag.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🐳</div>
+                <h3>Docker Hub</h3>
+                <p>
+                    The image is pushed to Docker Hub and can be pulled
+                    from another machine.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🌿</div>
+                <h3>Branch Control</h3>
+                <p>
+                    Feature branches build the image, while Docker Hub
+                    pushes happen only from the main branch.
+                </p>
+            </div>
+
+        </div>
+
+        <section class="pipeline">
+            <h2>CI/CD Pipeline</h2>
+
+            <div class="flow">
+                <span>Git Push</span>
+                <div class="arrow">→</div>
+                <span>GitHub Actions</span>
+                <div class="arrow">→</div>
+                <span>Docker Build</span>
+                <div class="arrow">→</div>
+                <span>Docker Hub</span>
+                <div class="arrow">→</div>
+                <span>Docker Pull</span>
+                <div class="arrow">→</div>
+                <span>Container</span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        90 Days of DevOps • Day 45 • GitHub Actions + Docker
+    </footer>
+
+</body>
+</html>
