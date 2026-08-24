@@ -1,5 +1,7 @@
 # Day 48 – GitHub Actions Project: End-to-End CI/CD Pipeline
 
+[![Main Branch Pipeline](https://github.com/ak1021lg15/github-actions-capstone/actions/workflows/main-pipeline.yml/badge.svg)](https://github.com/ak1021lg15/github-actions-capstone/actions/workflows/main-pipeline.yml) [![PR Pipeline](https://github.com/ak1021lg15/github-actions-capstone/actions/workflows/pr-pipeline.yml/badge.svg)](https://github.com/ak1021lg15/github-actions-capstone/actions/workflows/pr-pipeline.yml) [![Scheduled Health Check](https://github.com/ak1021lg15/github-actions-capstone/actions/workflows/health-check.yml/badge.svg)](https://github.com/ak1021lg15/github-actions-capstone/actions/workflows/health-check.yml)
+
 ## Challenge Tasks
 
 ### Task 1: Set Up the Project Repo
@@ -124,24 +126,55 @@ Create `.github/workflows/health-check.yml`:
 
 ### 2. Main Branch Flow (Continuous Deployment)
 **Trigger**: When code is merged into the `main` branch.
-> Merge to Main → **Build & Test** → **Docker Build & Push** → **Trivy Security Scan** → **Deploy**
+> Merge to Main → **Build & Test** → **Docker Build & Push** → **Deploy**
 
 ### 3. Scheduled Monitoring
 **Trigger**: Every 12 hours via GitHub Actions Cron.
 > Every 12 Hours → **Health Check**
 
+![badges image](ss/task7.png)
 
 
-   ![image](images/badges.png)
+### worfflow diagram
 
+```
+                  ┌─────────────────┐
+                  │    PR Opened    │
+                  └────────┬────────┘
+                           ↓
+                  ┌─────────────────┐
+                  │   Build & Test  │
+                  └────────┬────────┘
+                           ↓
+                  ┌─────────────────┐
+                  │  PR Checks Pass │
+                  └────────┬────────┘
+                           ↓
+                  ┌─────────────────┐
+                  │   Merge to Main │
+                  └────────┬────────┘
+                           ↓
+                  ┌─────────────────┐
+                  │   Build & Test  │
+                  └────────┬────────┘
+                           ↓
+                  ┌─────────────────┐
+                  │ Docker Build    │
+                  │   & Push        │
+                  └────────┬────────┘
+                           ↓
+                  ┌─────────────────┐
+                  │     Deploy      │
+                  └─────────────────┘
+
+
+        Every 12 Hours
+              ↓
+       ┌───────────────┐
+       │ Health Check  │
+       └───────────────┘
+
+```
 
 ---
 
-## Brownie Points: Add Security to Your Pipeline
-Want to go above and beyond? Add a **DevSecOps** step to your main pipeline:
-1. Add `aquasecurity/trivy-action` after the Docker build step to scan your image for vulnerabilities
-2. Fail the pipeline if any **CRITICAL** severity CVE is found
-3. Upload the scan report as an artifact
-
-
-   ![image](images/trivy-artifact.png)
