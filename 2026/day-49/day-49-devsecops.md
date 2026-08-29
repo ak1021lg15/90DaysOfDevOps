@@ -188,8 +188,74 @@ Always active
 
 Draw this diagram in your notes. You just built a **DevSecOps pipeline** — security is now part of your automation, not an afterthought.
 
-  ![image](images/devsecops.png)
+  ![image](ss/devsecops.png)
 
+
+```
+                    DEVSECOPS PIPELINE
+                           │
+                           │
+                    Developer creates PR
+                           │
+                           ▼
+                    ┌───────────────┐
+                    │   PR Opened   │
+                    └───────┬───────┘
+                            │
+                            ▼
+                    ┌───────────────┐
+                    │ Build & Test  │
+                    └───────┬───────┘
+                            │
+                            ▼
+                    ┌─────────────────────┐
+                    │ Dependency Review   │
+                    │ Critical CVE Check  │
+                    └─────────┬───────────┘
+                              │
+                       ┌──────┴──────┐
+                       │             │
+                     PASS           FAIL
+                       │             │
+                       ▼             ▼
+                 PR Checks Pass    PR Blocked
+                       │
+                       ▼
+                  Merge to main
+                       │
+                       ▼
+                 Build & Test
+                       │
+                       ▼
+                  Docker Build
+                       │
+                       ▼
+                ┌───────────────┐
+                │ Trivy Scan    │
+                │ CRITICAL CVE  │
+                └───────┬───────┘
+                        │
+                   ┌────┴────┐
+                   │         │
+                 PASS       FAIL
+                   │         │
+                   ▼         ▼
+             Docker Push    STOP
+                   │
+                   ▼
+                 Deploy
+
+
+        ┌───────────────────────────────┐
+        │      GitHub Security          │
+        │       Always Active           │
+        │                               │
+        │ Secret Scanning               │
+        │       +                       │
+        │ Push Protection               │
+        └───────────────────────────────┘
+
+```
 ---
 
 Secret scanning detects sensitive data (like API keys or passwords) accidentally committed to code, preventing leaks.
