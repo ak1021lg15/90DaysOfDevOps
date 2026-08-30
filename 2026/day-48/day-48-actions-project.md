@@ -13,6 +13,16 @@
 3. Add a `Dockerfile` and a basic test (even a script that curls the health endpoint counts)
 4. Add a `README.md` with a project description
 
+## 📦 Project Repository
+
+🔗 **GitHub Repository:** [github-actions-capstone](https://github.com/ak1021lg15/github-actions-capstone)
+
+🐳 **Docker Hub Repository:** [ashish3185/node-mong-app](https://hub.docker.com/repository/docker/ashish3185/node-mongo-app/general)
+
+> **Project Goal:** Build a production-style CI/CD pipeline using reusable GitHub Actions workflows, automated Docker image publishing, protected deployments, scheduled health monitoring, and DevSecOps security scanning.
+
+> **Note:** This repository extends the Dockerized Task Manager API created during **Day 36** by implementing reusable GitHub Actions workflows, Docker image publishing, production deployment, scheduled health checks, and Trivy-based vulnerability scanning.
+
 ---
 
 ### Task 2: Reusable Workflow — Build & Test
