@@ -261,7 +261,10 @@ kubectl config view
 ```
 Displays the complete Kubernetes configuration, including clusters, users, and contexts.
 
-![Cluster Lifecycle](./images/09-task-6-practice-cluster-lifecycle.png)
+![cluster lifecycle](ss/task6.1.png)
+
+![cluster lifecycle](ss/task6.2.png)
+
 
 ### Verify Your Understanding
 
