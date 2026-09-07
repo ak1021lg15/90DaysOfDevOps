@@ -1,0 +1,124 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2026-09-07T08:07:46Z"
+  generation: 1
+  labels:
+    run: redis-pod
+  name: redis-pod
+  namespace: default
+  resourceVersion: "21481"
+  uid: a1c59f3a-f90b-4d2d-87d6-0fe89c1094e8
+spec:
+  containers:
+  - image: redis:latest
+    imagePullPolicy: Always
+    name: redis-pod
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-mbtjr
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: devops-cluster-control-plane
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-mbtjr
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-09-07T08:07:47Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-09-07T08:07:46Z"
+    observedGeneration: 1
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-09-07T08:08:11Z"
+    observedGeneration: 1
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-09-07T08:08:11Z"
+    observedGeneration: 1
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-09-07T08:07:46Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://d6e9bfdf9e38d14586c201f7c2dbbed4b4f7da36bc3c7e2e83a696780a31f35a
+    image: docker.io/library/redis:latest
+    imageID: docker.io/library/redis@sha256:298e5b3bc566bade82f46ad5511777a4a07a294097ce16ada2f6a42be5239df5
+    lastState: {}
+    name: redis-pod
+    ready: true
+    resources: {}
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-09-07T08:08:11Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        uid: 0
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-mbtjr
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 172.19.0.2
+  hostIPs:
+  - ip: 172.19.0.2
+  observedGeneration: 1
+  phase: Running
+  podIP: 10.244.0.7
+  podIPs:
+  - ip: 10.244.0.7
+  qosClass: BestEffort
+  resources: {}
+  startTime: "2026-09-07T08:07:46Z"
