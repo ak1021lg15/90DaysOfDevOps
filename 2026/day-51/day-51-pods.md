@@ -339,7 +339,7 @@ Verify that all Pods have been removed:
 kubectl get pods
 ```
 
-![Task 6.1](./images/15-task-6.1-delete-pods.png)
+![task 6.1 photo ](ss/task6.1.png)
 
 > **Note**
 >
