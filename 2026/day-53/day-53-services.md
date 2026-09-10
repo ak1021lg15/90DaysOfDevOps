@@ -344,8 +344,11 @@ kubectl get services
 - Verified that only the default `kubernetes` Service remained in the cluster.
 - Confirmed that the cluster was returned to a clean state, ready for the next hands-on lab.
 
-![Task 7.1](./images/10-task-7.1.png)
+**Before deleting**
 
+![task 7.1 photo](ss/task7.1.png)
+
+![task 7.2 photo](ss/task7.2.png)
 ---
 
 ## Concepts Learned
