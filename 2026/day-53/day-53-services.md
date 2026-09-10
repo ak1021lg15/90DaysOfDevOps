@@ -348,6 +348,8 @@ kubectl get services
 
 ![task 7.1 photo](ss/task7.1.png)
 
+**After deleting**
+
 ![task 7.2 photo](ss/task7.2.png)
 ---
 
