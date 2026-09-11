@@ -172,7 +172,7 @@ kubectl patch configmap live-config \
 ## Task 7: Clean Up
 Delete all pods, ConfigMaps, and Secrets you created.
 
-![task 7.1 photo](task7.1.png)
+![task 7.1 photo](ss/task7.1.png)
 
 ---
 
