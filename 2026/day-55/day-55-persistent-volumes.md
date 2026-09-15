@@ -130,7 +130,9 @@ Access modes to know:
 
   - **Why:** It was manually created and had a **Reclaim Policy = `Retain`**, so Kubernetes kept the PV after the PVC was deleted. The PV changed to **`Released`** and was later deleted manually.
 
-![Task 7](./images/09-task-7-clean-up.png)
+![task 7.1 photo](ss/task7.1.png)
+
+![task 7.2 photo](ss/task7.2.png)
 
 ---
 
