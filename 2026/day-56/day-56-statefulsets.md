@@ -128,6 +128,17 @@ The new pod reconnected to the same PVC.
 
 - No. PVCs are NOT automatically deleted when a StatefulSet is deleted. They remain as a safety feature to protect persistent data and must be deleted manually when they are no longer needed.
 
+**Before delete**
+
+![Before delete photo 7.1](task7.1.png)
+
+**After delete**
+
+![After delete photo 7.2](task7.2.png)
+
+![7.3 photo](task7.3.png)
+
+![7.4 photo](task7.4.png)
 
 ---
 
