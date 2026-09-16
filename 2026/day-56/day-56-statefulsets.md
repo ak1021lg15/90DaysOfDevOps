@@ -130,15 +130,15 @@ The new pod reconnected to the same PVC.
 
 **Before delete**
 
-![Before delete photo 7.1](task7.1.png)
+![Before delete photo 7.1](ss/task7.1.png)
 
 **After delete**
 
-![After delete photo 7.2](task7.2.png)
+![After delete photo 7.2](ss/task7.2.png)
 
-![7.3 photo](task7.3.png)
+![7.3 photo](ss/task7.3.png)
 
-![7.4 photo](task7.4.png)
+![7.4 photo](ss/task7.4.png)
 
 ---
 
