@@ -160,11 +160,11 @@ kubectl delete svc readiness-svc
 ```
 **Before delete**
 
-![task 7.1 photo](task7.1.png)
+![task 7.1 photo](ss/task7.1.png)
 
 **After delete**
 
-![task 7.2 photo](task7.2.png)
+![task 7.2 photo](ss/task7.2.png)
 
 **Note:** The default kubernetes Service is managed by Kubernetes and remains after cleanup.
 
