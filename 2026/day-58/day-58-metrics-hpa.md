@@ -32,9 +32,9 @@ These metrics are used by:
 - **Worker2:** CPU `0%` | Memory `2%`
 - Current Node utilization is low: CPU usage is **0–2%** and memory usage is **2–8%** across Nodes.
 
-![task 1.1 photo](task1.1.png)
+![task 1.1 photo](ss/task1.1.png)
 
-![task 1.2 photo](task1.2.png)
+![task 1.2 photo](ss/task1.2.png)
 ---
 
 ### Task 2: Explore `kubectl top`
@@ -55,7 +55,7 @@ These metrics are used by:
 - **Memory:** `231Mi`
 - The `kube-apiserver` is currently using the most CPU.
 
-![task 2](task2.png)
+![task 2](ss/task2.png)
 
 ---
 
@@ -78,9 +78,9 @@ These metrics are used by:
 - **CPU:** `1m`
 - **Memory:** `9Mi`
 
-![task 3.1 photo](task3.1.png)
+![task 3.1 photo](ss/task3.1.png)
 
-![task 3.2 photo](task3.2.png)
+![task 3.2 photo](ss/task3.2.png)
 
 ---
 
@@ -97,7 +97,7 @@ This scales up when average CPU exceeds 50% of requests, and down when it drops 
 - Current CPU utilization is **0% of the requested CPU**, while the target is **50%**.
 - The HPA is successfully receiving CPU metrics and is currently maintaining **1 replica**.
 
-![task 4](task4.png)
+![task 4](ss/task4.png)
 ---
 
 ### Task 5: Generate Load and Watch Autoscaling
@@ -123,13 +123,13 @@ This scales up when average CPU exceeds 50% of requests, and down when it drops 
 - After the load generator was deleted, CPU usage dropped back to `0%`.
 - The HPA did not immediately scale down because HPA scale-down is intentionally conservative.
 
-![task 5.1 photo](task5.1.png)
+![task 5.1 photo](ss/task5.1.png)
 
-![task 5.2 photo](task5.2.png)
+![task 5.2 photo](ss/task5.2.png)
 
-![task 5.3 photo](task5.3.png)
+![task 5.3 photo](ss/task5.3.png)
 
-![task 5.4 photo](task5.4.png)
+![task 5.4 photo](ss/task5.4.png)
 
 ---
 
@@ -152,9 +152,9 @@ This scales up when average CPU exceeds 50% of requests, and down when it drops 
 - `scaleDown` controls policies for decreasing replicas.
 - In this configuration, scale-down uses a **300-second stabilization window** to avoid rapid fluctuations.
 
-![task 6.1 photo](task6.1.png)
+![task 6.1 photo](ss/task6.1.png)
 
-![task 6.2 photo](task6.2.png)
+![task 6.2 photo](ss/task6.2.png)
 
 ---
 
