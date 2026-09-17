@@ -158,7 +158,13 @@ Delete all pods and services you created.
 kubectl delete pod --all
 kubectl delete svc readiness-svc
 ```
-![Task 7](./images/16-task-7-cleanup.png)
+**Before delete**
+
+![task 7.1 photo](task7.1.png)
+
+**After delete**
+
+![task 7.2 photo](task7.2.png)
 
 **Note:** The default kubernetes Service is managed by Kubernetes and remains after cleanup.
 
