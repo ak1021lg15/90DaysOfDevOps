@@ -169,7 +169,13 @@ Delete the HPA, Service, Deployment, and load-generator Pod. Leave the Metrics S
 - `kubectl top nodes` successfully returns CPU and memory metrics.
 - HPA, PHP-Apache Deployment, Service, and load-generator Pod were removed.
 
-![Task 7](./images/12-task-7-cleanup.png)
+**Before delete**
+
+![task 7.1 photo](ss/task7.1.png)
+
+**After delete**
+
+![task 7.1 photo](ss/task7.2.png)
 
 ---
 
