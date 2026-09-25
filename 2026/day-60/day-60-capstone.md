@@ -271,9 +271,9 @@ kubectl delete namespace wordpress-helm
 - The PVC in the `capstone` namespace was removed along with the namespace.
 - The Kubernetes context was reset to the `default` namespace.
 
-![Task 8.1](./images/19-task-8.1-kubectl-get-all-n-capstone.png)
+![task 8.1 photo](ss/task8.1.png)
 
-![Task 8.2](./images/20-task-8.2-cleanup-and-set-default.png)
+![task 8.2 photo](ss/task8.2.png)
 
 ---
 
