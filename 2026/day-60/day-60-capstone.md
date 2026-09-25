@@ -218,7 +218,7 @@ Kubernetes provides **self-healing** by automatically recreating failed pods, wh
 - **Helm** is faster and easier for deploying complex applications because one chart manages multiple Kubernetes resources.
 - Helm also makes upgrades, configuration changes, and repeatable deployments easier.
 
-![Task 7.3](./images/17-task-7.3-compare.png)
+![task 7.3 photo](ss/task7.3.png)
 
 6. Clean up the Helm deployment:
 
@@ -233,7 +233,8 @@ kubectl delete namespace wordpress-helm
 - No resources remained in the `wordpress-helm` namespace.
 - The `wordpress-helm` namespace was deleted successfully.
 
-![Task 7.4](./images/18-task-7.4-helm-deployment-cleanup.png)
+![task 7.4 photo](ss/task7.4.png)
+
 
 ---
 
